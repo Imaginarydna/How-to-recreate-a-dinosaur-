@@ -1,0 +1,32 @@
+import random
+import time
+
+def extract_dna():
+    """Simula a extração de DNA de um mosquito em âmbar."""
+    print("🔬 Extraindo DNA do mosquito preservado em âmbar...")
+    time.sleep(2)
+    dna_sequence = ''.join(random.choices(['A', 'T', 'C', 'G'], k=20))
+    print(f"DNA extraído: {dna_sequence}")
+    return dna_sequence
+
+def fill_genome_gaps(dna):
+    """Simula o preenchimento de lacunas no genoma com DNA moderno."""
+    print("\n🧬 Preenchendo lacunas do genoma com DNA moderno...")
+    time.sleep(2)
+    modern_dna = ''.join(random.choices(['A', 'T', 'C', 'G'], k=10))
+    complete_dna = dna + modern_dna
+    print(f"Genoma completo: {complete_dna}")
+    return complete_dna
+
+def clone_dinosaur(complete_dna):
+    """Simula a clonagem e incubação de um dinossauro."""
+    print("\n🥚 Clonando dinossauro...")
+    time.sleep(3)
+    species = random.choice(["Tyrannosaurus Rex", "Velociraptor", "Triceratops", "Brachiosaurus"])
+    print(f"Sucesso! Um {species} foi criado com o genoma: {complete_dna}")
+
+# Simulação completa
+print("🏞️ Bem-vindo ao Projeto Dino Revival!")
+dna = extract_dna()
+complete_dna = fill_genome_gaps(dna)
+clone_dinosaur(complete_dna)
